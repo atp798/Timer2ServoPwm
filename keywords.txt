@@ -1,0 +1,44 @@
+#######################################
+# Syntax Coloring Map Servo
+# Use one or tow tabs to seperate dims and descriptions
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Timer2Servo KEYWORD1	Servo
+Timer2Pwm KEYWORD1 Servo
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+attach	KEYWORD2
+detach	KEYWORD2
+write	KEYWORD2
+read	KEYWORD2
+attached	KEYWORD2
+writeMicroseconds	KEYWORD2
+readMicroseconds	KEYWORD2
+attached KEYWORD2
+debug KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+MIN_PULSE_WIDTH LITERAL1
+MAX_PULSE_WIDTH LITERAL1
+PERIOD LITERAL1
+PRESCALE_FACTOR LITERAL1
+CRYSTAL_FREQ LITERAL1
+TICKS_PER_CYCLE LITERAL1
+MAX_SERVOS LITERAL1
+INVALID_SERVO LITERAL1
+CYCLES_PER_PERIOD LITERAL1
+CYCLES_PER_SERVO LITERAL1
+TIME_PER_CYCLE LITERAL1
+TICKS_PER_MICROSECOND LITERAL1
+PERIOD_REVISE_CYCLES LITERAL1
+PERIOD_REVISE_TICKS LITERAL1
+MAX_PWM LITERAL1
+INVALID_PWM LITERAL1
