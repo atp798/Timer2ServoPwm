@@ -4,7 +4,7 @@
   All rights reserved.
   MIT License.
 */
-#include "Timer2ServoPwm/Timer2ServoPwm.h"
+#include "Timer2ServoPwm.h"
 #include <avr/interrupt.h>
 
 #define __DEBUG

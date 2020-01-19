@@ -38,7 +38,7 @@
 #define PERIOD_REVISE_CYCLES  4
 #define PERIOD_REVISE_TICKS   32
 
-#define MAX_PWM               2
+#define MAX_PWM               8
 #define INVALID_PWM           255
 
 class Timer2Servo{
