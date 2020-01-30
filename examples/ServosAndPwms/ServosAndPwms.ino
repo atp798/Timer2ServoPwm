@@ -6,31 +6,46 @@
 */
 #include <Timer2ServoPwm.h>
 
-Timer2Servo servo[4];
+#define USE_PWM
+
+Servo servo[7];
+
+#ifdef USE_PWM
 Timer2Pwm pwm[4];
+#endif
 
 void setup() {
-  servo[0].attach(3);
-  servo[1].attach(4);
+  servo[0].attach(8);
+  servo[1].attach(12);
   servo[2].attach(5);
-  servo[3].attach(6);
-  pwm[0].attach(8);
-  pwm[1].attach(9);
-  pwm[2].attach(10);
-  pwm[3].attach(11);
+  servo[3].attach(3);
+  servo[4].attach(9);
+  servo[5].attach(10);
+  servo[6].attach(4);
+#ifdef USE_PWM
+  pwm[0].attach(11);
+  pwm[1].attach(13);
+  pwm[2].attach(6);
+  pwm[3].attach(7);
+#endif
 }
 
 void loop() {
-  static int val = 0;
-  val += 1;
+  static int val = 54;
   int i;
-  for(i=0;i<4;++i){
-    servo[i].write(val+i);
-    pwm[i].write(val+i);
+  for(i=0;i<7;++i){
+    uint16_t valw = val*10+i*5;
+    servo[i].write(valw);
+#ifdef USE_PWM
+    if(i<4){
+      pwm[i].write(val+i);
+    }
+#endif
   }
-  val %= 180;
-  if(val == 0){
-    delay(1000);
+  val += 3;
+  val %= 249;
+  if(val==0){
+    val=54;
   }
   delay(100);
 }
